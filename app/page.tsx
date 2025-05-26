@@ -299,7 +299,7 @@ export default function Portfolio() {
   // Animate stats counters
   useEffect(() => {
     const animateStats = () => {
-      const targetStats = { clients: 100, experience: 5, satisfaction: 98, policies: 0 }
+      const targetStats = { clients: 100, experience: 5, satisfaction: 98, policies: 20 }
       const duration = 2000 // 2 seconds
       const steps = 50
       const interval = duration / steps
@@ -448,19 +448,17 @@ export default function Portfolio() {
                 <div className="flex flex-wrap gap-4">
 
 
-                <a
-                    href="https://calendly.com/plukbluesapphire2025/booking-an-appointment"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-4 py-2 text-sm text-white rounded-md hover:bg-primary-dark transition-all duration-300 relative overflow-hidden group hover:shadow-lg hover:translate-y-[-2px]"
-                    style={{ backgroundColor: "var(--primary)" }}
-                  >
-                    <span className="relative z-10 flex items-center font-medium">
-                      <Calendar className="mr-2 h-5 w-5" />
-                      Book Appointment
-                    </span>
-                    <span className="absolute inset-0 bg-gradient-to-r from-primary-light to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                  </a>
+               <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-4 py-2 text-sm text-white rounded-md hover:bg-primary-dark transition-all duration-300 relative overflow-hidden group hover:shadow-lg hover:translate-y-[-2px]"
+                style={{ backgroundColor: "var(--primary)" }}
+              >
+                <span className="relative z-10 flex items-center font-medium">
+                  <Calendar className="mr-2 h-5 w-5" />
+                  Book Appointment
+                </span>
+                <span className="absolute inset-0 bg-gradient-to-r from-primary-light to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              </a>
 
 
 
@@ -476,30 +474,50 @@ export default function Portfolio() {
                     </Link>
                   </Button>
                 </div>
-                <StaggerContainer className="flex gap-4 pt-2" staggerDelay={150}>
-                  <Link
-                    href="https://www.linkedin.com/in/rona-oliveros-3923a5354"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin className="h-6 w-6 text-white hover:text-primary-light transition-colors" />
-                  </Link>
-                  <Link href="mailto:pluk.ronaoliveros11@gmail.com" aria-label="Email">
-                    <Mail className="h-6 w-6 text-white hover:text-primary-light transition-colors" />
-                  </Link>
-                  <Link href="tel:09627645297" aria-label="Phone">
-                    <Phone className="h-6 w-6 text-white hover:text-primary-light transition-colors" />
-                  </Link>
-                  <Link
-                    href="https://maps.app.goo.gl/18F Exquadra Tower 1 Jade Drive, Ortigas Center, San Antonio Pasig City"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Location"
-                  >
-                    <MapPin className="h-6 w-6 text-white hover:text-primary-light transition-colors" />
-                  </Link>
-                </StaggerContainer>
+    <StaggerContainer className="flex gap-4 pt-2" staggerDelay={150}>
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/rona-oliveros-3923a5354"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="hover:text-primary-light transition-colors text-white"
+            >
+              <Linkedin className="h-6 w-6" />
+            </a>
+
+            {/* Email via Gmail */}
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=pluk.ronaoliveros11@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Email"
+              className="hover:text-primary-light transition-colors text-white"
+            >
+              <Mail className="h-6 w-6" />
+            </a>
+
+            {/* Phone */}
+            <a
+              href="tel:09627645297"
+              aria-label="Phone"
+              className="hover:text-primary-light transition-colors text-white"
+            >
+              <Phone className="h-6 w-6" />
+            </a>
+
+            {/* Google Maps Location */}
+            <a
+              href="https://www.google.com/maps?q=18F+Exquadra+Tower+1+Jade+Drive,+Ortigas+Center,+San+Antonio,+Pasig+City"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Location"
+              className="hover:text-primary-light transition-colors text-white"
+            >
+              <MapPin className="h-6 w-6" />
+            </a>
+          </StaggerContainer>
+
               </AnimatedElement>
               <AnimatedElement
                 className="md:w-1/2 flex justify-center items-center relative"
@@ -812,19 +830,18 @@ export default function Portfolio() {
             </StaggerContainer>
 
             <AnimatedElement className="text-center mt-12" animation="fade-in" delay={200}>
-              <a
-                href="https://calendly.com/plukbluesapphire2025/booking-an-appointment"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-full hover:bg-primary-dark transition relative overflow-hidden group shadow-md hover:shadow-lg hover:translate-y-[-2px]"
-                style={{ backgroundColor: "var(--primary)" }}
-              >
-                <span className="relative z-10 flex items-center">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Book Appointment
-                </span>
-                <span className="absolute inset-0 bg-gradient-to-r from-primary-light to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              </a>
+             <a
+  href="#contact"
+  className="inline-flex items-center justify-center px-4 py-2 text-sm text-white rounded-md hover:bg-primary-dark transition-all duration-300 relative overflow-hidden group hover:shadow-lg hover:translate-y-[-2px]"
+  style={{ backgroundColor: "var(--primary)" }}
+>
+  <span className="relative z-10 flex items-center font-medium">
+    <Calendar className="mr-2 h-5 w-5" />
+    Book Appointment
+  </span>
+  <span className="absolute inset-0 bg-gradient-to-r from-primary-light to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+</a>
+
             </AnimatedElement>
 
           </div>
@@ -1069,55 +1086,81 @@ export default function Portfolio() {
 
             {/* Updated contact section with map on left and form on right */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-              {/* Map section - left side */}
-              <AnimatedElement animation="slide-in-left" delay={400} className="h-full">
-                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl shadow-lg h-full">
-                  <h3 className="text-xl font-semibold mb-4 text-white">Visit Our Office</h3>
-                  <p className="mb-6 text-white">
-                    18th floor Exquadra Tower, 1 Jade Drive
-                    <br />
-                    Ortigas Center, Pasig, Metro Manila
-                  </p>
+             {/* Map section - left side */}
+            <AnimatedElement animation="slide-in-left" delay={400} className="h-full">
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl shadow-lg h-full">
+                <h3 className="text-xl font-semibold mb-4 text-white">Visit Our Office</h3>
+                <p className="mb-6 text-white">
+                  18th floor Exquadra Tower, 1 Jade Drive
+                  <br />
+                  Ortigas Center, Pasig, Metro Manila
+                </p>
 
-                  {/* Interactive Map Component with real Google Maps */}
-                  <InteractiveMap
-                    address="18th floor Exquadra Tower, 1 Jade Drive Ortigas Center, Pasig, Metro Manila"
-                    height="400px"
-                    showControls={true}
-                  />
+                {/* Interactive Map Component with real Google Maps */}
+                <InteractiveMap
+                  address="18th floor Exquadra Tower, 1 Jade Drive Ortigas Center, Pasig, Metro Manila"
+                  height="400px"
+                  showControls={true}
+                />
 
-                  {/* Contact info below map */}
-                  <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div className="flex items-center">
-                      <div className="bg-white/10 p-3 rounded-full mr-3">
-                        <Phone className="h-5 w-5 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="text-sm font-medium text-white">Phone</h4>
-                        <p className="text-sm text-white">+63 (123) 456-7890</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="bg-white/10 p-3 rounded-full mr-3">
-                        <Mail className="h-5 w-5 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="text-sm font-medium text-white">Email</h4>
-                        <p className="text-sm text-white">rona@example.com</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="bg-white/10 p-3 rounded-full mr-3">
-                        <Clock className="h-5 w-5 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="text-sm font-medium text-white">Hours</h4>
-                        <p className="text-sm text-white">Mon-Fri: 9am-5pm</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </AnimatedElement>
+                {/* Contact info below map */}
+            <div className="mt-6 flex flex-col sm:flex-row sm:justify-between gap-6">
+  {/* Phone */}
+  <div className="flex items-start sm:items-center gap-4 sm:flex-1">
+    <div className="bg-white/10 p-3 rounded-full">
+      <Phone className="h-6 w-6 text-white" />
+    </div>
+    <div>
+      <h4 className="text-sm font-semibold text-white mb-1">Phone</h4>
+      <a
+        href="tel:09627645297"
+        className="text-sm text-white hover:text-primary-light transition-colors"
+      >
+        0962 764 5297
+      </a>
+    </div>
+  </div>
+
+  {/* Email */}
+  <div className="flex items-start sm:items-center gap-4 sm:flex-1">
+    <div className="bg-white/10 p-3 rounded-full">
+      <Mail className="h-6 w-6 text-white" />
+    </div>
+    <div>
+      <h4 className="text-sm font-semibold text-white mb-1">Email</h4>
+      <a
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=pluk.ronaoliveros11@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm text-white hover:text-primary-light transition-colors break-all"
+      >
+        pluk.ronaoliveros11@gmail.com
+      </a>
+    </div>
+  </div>
+
+  {/* Hours */}
+  <div className="flex items-start sm:items-center gap-4 sm:flex-1">
+    <div className="bg-white/10 p-3 rounded-full">
+      <Clock className="h-6 w-6 text-white" />
+    </div>
+    <div>
+      <h4 className="text-sm font-semibold text-white mb-1">Hours</h4>
+      <a
+        href="https://www.google.com/maps?q=18F+Exquadra+Tower+1+Jade+Drive,+Ortigas+Center,+San+Antonio,+Pasig+City"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm text-white hover:text-primary-light transition-colors"
+      >
+        Mon–Fri: 9am–5pm
+      </a>
+    </div>
+  </div>
+</div>
+
+              </div>
+            </AnimatedElement>
+
 
               {/* Form section - right side */}
               <AnimatedElement animation="slide-in-right" delay={500}>
@@ -1133,154 +1176,129 @@ export default function Portfolio() {
                   </p>
                 </div>
               </AnimatedElement>
+
+
             </div>
           </div>
+
+
         </AnimatedSection>
       </main>
-      <footer style={{ backgroundColor: "#001525" }} className="text-white py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <AnimatedElement animation="slide-in-left" delay={100}>
-              <div>
-                <div className="mb-4">
-                  <span className="text-white text-xl font-bold">PRU LIFE U.K.</span>
-                </div>
-                <p className="text-white mb-4">
-                  Established in 2010, PRU LIFE U.K. is one of the leading financial services and insurance providers in
-                  the region.
-                </p>
-                <div className="flex gap-4">
-                  <Link
-                    href="https://www.linkedin.com/in/rona-oliveros-3923a5354"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin className="h-5 w-5 text-white hover:text-primary-light transition-colors" />
-                  </Link>
-                  <Link href="mailto:pluk.ronaoliveros11@gmail.com" aria-label="Email">
-                    <Mail className="h-5 w-5 text-white hover:text-primary-light transition-colors" />
-                  </Link>
-                  <Link href="tel:09627645297" aria-label="Phone">
-                    <Phone className="h-5 w-5 text-white hover:text-primary-light transition-colors" />
-                  </Link>
-                </div>
-              </div>
-            </AnimatedElement>
-            <AnimatedElement animation="fade-in" delay={200}>
-              <div>
-                <h4 className="font-semibold mb-4">Products</h4>
-                <ul className="space-y-2 text-white">
-                  <li>
-                    <Link href="#" className="hover:text-primary-light transition-colors">
-                      Life Insurance
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="hover:text-primary-light transition-colors">
-                      Health Insurance
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="hover:text-primary-light transition-colors">
-                      Investment Plans
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="hover:text-primary-light transition-colors">
-                      Retirement Solutions
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </AnimatedElement>
-            <AnimatedElement animation="fade-in" delay={300}>
-              <div>
-                <h4 className="font-semibold mb-4">Quick Links</h4>
-                <ul className="space-y-2 text-white">
-                  <li>
-                    <Link href="#about" className="hover:text-primary-light transition-colors">
-                      About Me
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#skills" className="hover:text-primary-light transition-colors">
-                      My Expertise
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#products" className="hover:text-primary-light transition-colors">
-                      Products
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#feedback" className="hover:text-primary-light transition-colors">
-                      Feedback
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#faqs" className="hover:text-primary-light transition-colors">
-                      FAQs
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#contact" className="hover:text-primary-light transition-colors">
-                      Contact
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </AnimatedElement>
-            <AnimatedElement animation="slide-in-right" delay={400}>
-              <div>
-                <h4 className="font-semibold mb-4">Contact Information</h4>
-                <ul className="space-y-2 text-white">
-                  <li className="flex items-center gap-2">
-                    <Phone className="h-4 w-4 text-primary-light" />
-                    <span>09627645297</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Mail className="h-4 w-4 text-primary-light" />
-                    <span>pluk.ronaoliveros11@gmail.com</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <MapPin className="h-4 w-4 text-primary-light" />
-                    <span>18F Exquadra Tower 1 Jade Drive, Ortigas Center, San Antonio Pasig City</span>
-                  </li>
-                  <li className="flex items-center gap-2 mt-2">
-                    <Linkedin className="h-4 w-4 text-primary-light" />
-                    <Link
-                      href="https://www.linkedin.com/in/rona-oliveros-3923a5354"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-primary-light transition-colors"
-                    >
-                      LinkedIn Profile
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </AnimatedElement>
+     <footer style={{ backgroundColor: "#001525" }} className="text-white py-12">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Branding & Socials */}
+      <AnimatedElement animation="slide-in-left" delay={100}>
+        <div>
+          <div className="mb-4">
+            <span className="text-white text-xl font-bold">PRU LIFE U.K.</span>
           </div>
-          <AnimatedElement
-            animation="fade-in"
-            delay={500}
-            className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left"
-          >
-            <p className="text-sm text-white">
-              © {new Date().getFullYear()} Rona Oliveros, PRU LIFE U.K. Agent. All rights reserved.
-            </p>
-            <div className="text-sm text-white">
-              <Link href="#" className="hover:text-primary-light transition-colors mr-4">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="hover:text-primary-light transition-colors">
-                Terms of Service
-              </Link>
-            </div>
-          </AnimatedElement>
+          <p className="text-white mb-4 max-w-xs">
+            Established in 2010, PRU LIFE U.K. is one of the leading financial services and insurance providers in the region.
+          </p>
+          <div className="flex gap-4">
+            <Link
+              href="https://www.linkedin.com/in/rona-oliveros-3923a5354"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="h-5 w-5 text-white hover:text-primary-light transition-colors" />
+            </Link>
+            <Link href="mailto:pluk.ronaoliveros11@gmail.com" aria-label="Email">
+              <Mail className="h-5 w-5 text-white hover:text-primary-light transition-colors" />
+            </Link>
+            <Link href="tel:09627645297" aria-label="Phone">
+              <Phone className="h-5 w-5 text-white hover:text-primary-light transition-colors" />
+            </Link>
+          </div>
         </div>
-      </footer>
+      </AnimatedElement>
+
+      {/* Quick Links */}
+      <AnimatedElement animation="fade-in" delay={200}>
+        <div>
+          <h4 className="font-semibold mb-4">Quick Links</h4>
+          <ul className="space-y-2 text-white">
+            <li>
+              <Link href="#about" className="hover:text-primary-light transition-colors">
+                About Me
+              </Link>
+            </li>
+            <li>
+              <Link href="#skills" className="hover:text-primary-light transition-colors">
+                My Expertise
+              </Link>
+            </li>
+            <li>
+              <Link href="#feedback" className="hover:text-primary-light transition-colors">
+                Feedback
+              </Link>
+            </li>
+            <li>
+              <Link href="#faqs" className="hover:text-primary-light transition-colors">
+                FAQs
+              </Link>
+            </li>
+            <li>
+              <Link href="#contact" className="hover:text-primary-light transition-colors">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </AnimatedElement>
+
+      {/* Contact Information */}
+      <AnimatedElement animation="slide-in-right" delay={300}>
+        <div>
+          <h4 className="font-semibold mb-4">Contact Information</h4>
+          <ul className="space-y-3 text-white break-words max-w-full">
+            <li className="flex items-start gap-2">
+              <Phone className="h-4 w-4 text-primary-light mt-1" />
+              <span>09627645297</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Mail className="h-4 w-4 text-primary-light mt-1" />
+              <span className="break-all">pluk.ronaoliveros11@gmail.com</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <MapPin className="h-4 w-4 text-primary-light mt-1" />
+              <span className="break-words max-w-xs">
+                18F Exquadra Tower 1 Jade Drive, Ortigas Center, San Antonio Pasig City
+              </span>
+            </li>
+            <li className="flex items-center gap-2 mt-2">
+              <Linkedin className="h-4 w-4 text-primary-light" />
+              <Link
+                href="https://www.linkedin.com/in/rona-oliveros-3923a5354"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary-light transition-colors"
+              >
+                LinkedIn Profile
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </AnimatedElement>
+    </div>
+
+    {/* Footer Bottom */}
+    <AnimatedElement
+      animation="fade-in"
+      delay={400}
+      className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left"
+    >
+      <p className="text-sm text-white">
+        © {new Date().getFullYear()} Rona Oliveros, PRU LIFE U.K. Agent. All rights reserved.
+      </p>
+    
+    </AnimatedElement>
+  </div>
+</footer>
+
+ 
       
         {/* Botpress Scripts */}
 
@@ -1288,6 +1306,23 @@ export default function Portfolio() {
         <script src="https://files.bpcontent.cloud/2025/03/17/02/20250317024850-YWSCLL6Y.js"></script>
 
       <div>
+        {/* Scroll to Top Button (Bottom Left) */}
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-6 left-6 z-50 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary-dark transition-all duration-300"
+          aria-label="Scroll to top"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+          </svg>
+        </button>
+
       {/* Your app content */}
       <BotpressChat /> {/* This will inject Botpress */}
     </div>

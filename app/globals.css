@@ -233,6 +233,27 @@ body {
   }
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 4.5rem; /* Adjust this depending on chat button width */
+  z-index: 999;
+  background-color: var(--primary);
+  color: white;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.scroll-to-top:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-4px);
+}
+
+
+
 .animate-pulse-slow {
   animation: pulse-slow 4s infinite;
 }
