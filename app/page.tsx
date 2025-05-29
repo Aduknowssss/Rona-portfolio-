@@ -127,6 +127,13 @@ export default function Portfolio() {
         "Ms. Rona, thank you for always giving your best effort.❤️",
       rating: 4,
     },
+       {
+      name: "Valerie Toca",
+      title: "Sales",
+      feedback:
+        "She's an expert and a helpful agent. She's one chat away.",
+      rating: 5,
+    },
   ]);
 
   const handleAddTestimonial = (testimonial: Testimonial) => {
