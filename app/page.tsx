@@ -107,11 +107,11 @@ export default function Portfolio() {
 
   const [testimonials, setTestimonials] = useState<Testimonial[]>([
     {
-      name: "Maria Santos",
+      name: "Juliana Nuyad",
       title: "Business Owner",
       feedback:
-        "Rona helped me secure my family's future with a comprehensive life insurance plan. Her expertise and dedication are unmatched!",
-      rating: 5,
+        "I'm happy with Ms Rona to serve my needs",
+      rating: 4,
     },
     {
       name: "Juan Dela Cruz",
@@ -299,7 +299,7 @@ export default function Portfolio() {
   // Animate stats counters
   useEffect(() => {
     const animateStats = () => {
-      const targetStats = { clients: 100, experience: 5, satisfaction: 98, policies: 20 }
+      const targetStats = { clients: 100, experience: 5, satisfaction: 98, policies: 10 }
       const duration = 2000 // 2 seconds
       const steps = 50
       const interval = duration / steps
