@@ -110,21 +110,21 @@ export default function Portfolio() {
       name: "Juliana Nuyad",
       title: "Business Owner",
       feedback:
-        "I'm happy with Ms Rona to serve my needs",
+        "I'm happy with Ms. Rona to serve my needs",
       rating: 4,
     },
     {
-      name: "Juan Dela Cruz",
-      title: "School Teacher",
+      name: "Janice Vecina",
+      title: "Engineer",
       feedback:
-        "I was overwhelmed by insurance options until I met Rona. She simplified everything and found the perfect plan for my retirement needs.",
-      rating: 5,
+        "Satisfied Client. Ms. Rona is very approachable, accommodating and understands the customer's needs. Im very thankful that she approached me to get this insurance for our security. Good luck and wish you to have more clients join under your team.",
+      rating: 4,
     },
     {
-      name: "Anna Reyes",
-      title: "Healthcare Professional",
+      name: " Hazel Cruz",
+      title: "OFW ",
       feedback:
-        "Professional, knowledgeable, and genuinely cares about her clients. Rona has been managing my family's insurance needs for years.",
+        "Ms. Rona, thank you for always giving your best effort.❤️",
       rating: 4,
     },
   ]);
@@ -771,14 +771,24 @@ export default function Portfolio() {
                 />
               </AnimatedElement>
             </div>
+              <AnimatedElement className="text-center mt-12" animation="fade-in" delay={200}>
+             <a
+  href="#contact"
+  className="inline-flex items-center justify-center px-4 py-2 text-sm text-white rounded-md hover:bg-primary-dark transition-all duration-300 relative overflow-hidden group hover:shadow-lg hover:translate-y-[-2px]"
+  style={{ backgroundColor: "var(--primary)" }}
+>
+  <span className="relative z-10 flex items-center font-medium">
+    <Calendar className="mr-2 h-5 w-5" />
+    Book Appointment
+  </span>
+  <span className="absolute inset-0 bg-gradient-to-r from-primary-light to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+</a>
+
+            </AnimatedElement>
           </div>
         </AnimatedSection>
 
-        {/* Divider */}
-        <div className="h-16 bg-gradient-to-b from-accent/80 to-muted flex items-center justify-center">
-          <div className="w-24 h-1 bg-primary-light rounded-full"></div>
-        </div>
-
+    
         {/* Products Section */}
         <AnimatedSection
           id="products"
