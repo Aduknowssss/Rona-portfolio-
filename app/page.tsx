@@ -134,6 +134,13 @@ export default function Portfolio() {
         "She's an expert and a helpful agent. She's one chat away.",
       rating: 5,
     },
+     {
+      name: "Regina Lajera",
+      title: "Self Employed",
+      feedback:
+        "FA Rona is good and seems she really has passion on what she does and offer. She is one msg away every time I have questions and I appreciate that much. Hope she achieve financial freedom at its finest the soonest. She's a gem to your company so you better keep her.",
+      rating: 5,
+    },
   ]);
 
   const handleAddTestimonial = (testimonial: Testimonial) => {
